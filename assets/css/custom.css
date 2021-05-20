@@ -8,3 +8,17 @@ h5 {
     top: 91.5vh;
     width: 100%;
 }
+
+.row {
+    vertical-align: middle;
+    align-items: center;
+}
+
+.btn-primary{ 
+    background-color: #76519c !important;
+    border-color: #76519c !important;
+}
+
+#span-file {
+    padding-left: 1rem;
+}

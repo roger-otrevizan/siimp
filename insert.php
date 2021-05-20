@@ -8,7 +8,7 @@
 
            <div class="row">
                <div class="col-md-1">
-                   <p><b>Arquivo:</b></p>
+                   <span><b>Arquivo:</b></span>
                </div>
 
                <div id="file" class="col-md-4">
