@@ -1,31 +1,34 @@
 $(document).ready(function(){
-    $('#import_form').on('submit', function(event){
+    $('#upload_xml_form').on('submit', function(event){
      event.preventDefault();
    
      $.ajax({
-      url:"import.php",
+      url:"send_xml.php",
       method:"POST",
       data: new FormData(this),
       contentType:false,
       cache:false,
       processData:false,
       beforeSend:function(){
-       $('#submit').attr('disabled','disabled'),
-       $('#submit').val('Importing...');
+       $('#upload_xml_btn').attr('disabled','disabled'),
+       $('#upload_xml_btn').val('Enviando...');
       },
       success:function(data)
       {
+       
        $('#message').html(data);
-       $('#import_form')[0].reset();
-       $('#submit').attr('disabled', false);
-       $('#submit').val('Import');
+       $('#upload_xml_form')[0].reset();
+       $('#upload_xml_btn').attr('disabled', false);
+       $('#upload_xml_btn').val('Enviar');
+       
+      console.log("Sucesso...")
       }
      })
-   
+    
+    /*
      setInterval(function(){
       $('#message').html('');
      }, 5000);
-   
+    */
     });
    });
-   </script>

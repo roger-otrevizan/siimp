@@ -60,19 +60,25 @@ if (isset($_POST['uploadXML'])) {
 }
 */
 
-if (isset($_FILES['fileUpload']) && ($_FILES['fileUpload']['error'] == UPLOAD_ERR_OK)) {
-    $xml = simplexml_load_file($_FILES['fileUpload']['tmp_name']);                        
+function path_xml() {
+
+    if (isset($_FILES['file_upload']) && ($_FILES['file_upload']['error'] == UPLOAD_ERR_OK)) {
+        return $xml = simplexml_load_file($_FILES['file_upload']['tmp_name']);                        
+    }
 }
 
 //$xml = simplexml_load_file($_FILES['fileUpload']['tmp_name']);
 
-print_r($xml);
+
+
 //$path = "assets/fffffcff-ff49-43bd-93c0-5b9e30de2e73.xml";
 
-/*$path = "assets/dataset.xml";
+//$path = "assets/dataset.xml";
 
-//$path = ;
+$path = path_xml();
 
+print_r($path);
+/*
 $xml = simplexml_load_file($path); //or die("Erro: não foi possível abrir o XML.");
 
 
