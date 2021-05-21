@@ -1,17 +1,84 @@
-<?
-#define o encoding do cabeçalho para utf-8
-@header("Content-Type: text/html; charset=utf-8");
-#carrega o arquivo XML e retornando um Objeto
-$xml = simplexml_load_file("dataset.xml");
-# se o xml for um link e nao um arquivo como livros.xml, troque -o pelo link ex.
-# $xml = simplexml_load_file(“http://endereco/link/mesmoQueNaoTenhaExtensaoXML/“);
-#para cada nó LIVRO  atribui à variavel $livro (obj simplexml)
-foreach ($xml->dataset as $dataset) {
-    echo $livro->cod;
-    #usando o utf8_decode para exibir co
-    echo $livro->titulo;
-    echo $livro->autor;
-    echo $livro->descricao;
-    echo $livro->preco;
-    echo "<br>";
+<?php
+
+/*$dir = "assets//";
+
+$file = $_FILES["fileUpload"];
+
+if (move_uploaded_file($file["tmp_name"], "$dir/" . $file["name"])) {
+    echo "Arquivo enviado com sucesso!";
+} else {
+    echo "Erro, o arquivo n&atilde;o pode ser enviado.";
+}*/
+
+/*if (isset($_FILES['fileUpload'])) {
+    date_default_timezone_set("Brazil/East"); //Definindo timezone padrão
+
+    $ext = strtolower(substr($_FILES['fileUpload']['name'], -4)); //Pegando extensão do arquivo
+    $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+    $dir = 'uploads/'; //Diretório para uploads
+
+    move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir . $new_name); //Fazer upload do arquivo
+}*/
+
+/*
+$arqName = $_FILES['fileUpload']['name'];
+$arqTemp = $_FILES['fileUpload']['tmp_name'];
+$pasta = "assets//";
+// Pega a extensão do arquivo enviado
+$extensao = strtolower(end(explode('.', $arqName)));
+// Define o novo nome do arquivo usando um UNIX TIMESTAMP
+$nome = time() . '.' . $extensao;
+
+$upload = move_uploaded_file($arqTemp, $pasta . $nome);*/
+
+/*
+if (isset($_POST['uploadXML'])) {
+    $formatosPermitidos = array("xml", "XML");
+    $extensao = pathinfo($_FILES['fileUpload']['name'], PATHINFO_EXTENSION);
+    if (in_array($extensao, $formatosPermitidos)) {
+        $pasta = "assets/";
+        $temporario = $_FILES['fileUpload']['tmp_name'];
+        $novoNome = uniqid() . ".$extensao";
+        if (move_uploaded_file($temporario, $pasta . $novoNome)) {
+            $mensagem = "Upload feito com sucesso";
+        } else {
+            $mensagem = "Erro, não foi possível fazer o upload";
+        }
+    } else {
+        $mensagem = "Formato Inválido";
+    }
+}*/
+
+/*$xml = simplexml_load_file($pasta . $novoNome);
+echo $pasta . $novoNome;
+*/
+
+/*
+if (isset($_POST['uploadXML'])) {
+    copy($_FILES['fileUpload']['tmp_name'], 
+    "assets/".$_FILES['fileUpload']['name']);
 }
+*/
+
+if (isset($_FILES['fileUpload']) && ($_FILES['fileUpload']['error'] == UPLOAD_ERR_OK)) {
+    $xml = simplexml_load_file($_FILES['fileUpload']['tmp_name']);                        
+}
+
+//$xml = simplexml_load_file($_FILES['fileUpload']['tmp_name']);
+
+print_r($xml);
+//$path = "assets/fffffcff-ff49-43bd-93c0-5b9e30de2e73.xml";
+
+/*$path = "assets/dataset.xml";
+
+//$path = ;
+
+$xml = simplexml_load_file($path); //or die("Erro: não foi possível abrir o XML.");
+
+
+foreach ($xml->children() as $item) {
+    //echo "<strong>Título:</strong> " . $item . "<br />";
+    //print_r($item);
+    var_dump($item);
+}
+*/
