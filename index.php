@@ -1,7 +1,5 @@
 <?php
 
-include_once 'conection.php';
-
 include_once 'header.php';
 
 ?>
@@ -19,6 +17,9 @@ include_once 'header.php';
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="assets/css/custom.css" rel="stylesheet">
 
+
+
+
     <title>SIIMP Sistemas</title>
 
 </head>
@@ -27,15 +28,41 @@ include_once 'header.php';
     <br>
     <div class="container-fluid">
 
-        <?php include_once 'insert.php'; ?>
-
+        <h5>Ler XML</h5>
+        <hr>
         <br>
+        <div class="container-fluid">
+
+            <form id="upload_xml_form" method="POST" enctype="multipart/form-data" action="">
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <span><b>Arquivo:</b></span>
+                    </div>
+
+                    <div id="file" class="col-md-4">
+                        <input type="file" name="file_upload" accept=".xml">
+                    </div>
+
+                    <div class="col-md-2">
+                        <button type="submit" id="upload_xml_btn" name="upload_xml_btn" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+
+            </form>
+
+           
+        </div>
+        
+
         <hr>
         <h5>Resultado</h5>
 
-    <div id="message" disable> </div>
+        <div id="message" disable> </div>
 
-        <table class="table table-hover" style="text-align: center;">
+        
+
+        <table class="table table-hover responsive-table" style="text-align: center;">
             <thead class="table table-dark">
                 <tr>
                     <th scope="col">Caminho</th>
@@ -43,21 +70,15 @@ include_once 'header.php';
                 </tr>
             </thead>
 
-            <?php foreach ($path_xml as $key => $value) { ?>
-
-                <tbody>
-                    <tr>
-                        <td><?php echo $key ?></td>
-                        <td><?php echo $value ?></td>
-                    </tr>
-                </tbody>
-
-            <?php } ?>
+            <tbody id="table_xml">
+                <tr></tr>
+            </tbody>
 
         </table>
 
     </div>
-
+    <script src="assets/js/send_xml.js"></script>
+    
 
 </body>
 
