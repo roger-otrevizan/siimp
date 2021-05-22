@@ -15,21 +15,24 @@ $(document).ready(function () {
             },
             */
             success: function (data) {
-                $('#upload_xml_btn').attr('disabled', 'disabled');
-                $('#upload_xml_btn').text('Enviando...');
-                $('#message').html(data);
+                //$('#upload_xml_btn').attr('disabled', 'disabled');
+                //$('#upload_xml_btn').text('Enviando...');
+                $('#tbody_xml').html(data);
+                
+                $('#upload_xml_form')[0].reset();
 
 
                 console.log("Enviado com sucesso...")
             }
         })
 
-
+        /*
         setInterval(function () {
             $('#upload_xml_form')[0].reset();
             $('#upload_xml_btn').attr('disabled', false);
             $('#upload_xml_btn').text('Enviar');
         }, 1500);
+        */
 
     });
 });

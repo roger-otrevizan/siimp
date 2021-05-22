@@ -17,68 +17,68 @@ include_once 'header.php';
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="assets/css/custom.css" rel="stylesheet">
 
-
-
-
     <title>SIIMP Sistemas</title>
 
 </head>
 
 <body>
-    <br>
     <div class="container-fluid">
 
-        <h5>Ler XML</h5>
+        <h5 style="margin-top: 20px;">
+            <center>Ler XML</center>
+        </h5>
         <hr>
-        <br>
+
         <div class="container-fluid">
 
             <form id="upload_xml_form" method="POST" enctype="multipart/form-data" action="">
 
                 <div class="row">
-                    <div class="col-md-1">
-                        <span><b>Arquivo:</b></span>
+                    <div class="col-md-4" style="text-align-last: end;">
+                        <span id="span-file"><b>Arquivo:</b></span>
                     </div>
 
                     <div id="file" class="col-md-4">
                         <input type="file" name="file_upload" accept=".xml">
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <button type="submit" id="upload_xml_btn" name="upload_xml_btn" class="btn btn-primary">Enviar</button>
                     </div>
                 </div>
 
             </form>
 
-           
+
         </div>
-        
+
 
         <hr>
-        <h5>Resultado</h5>
+        <h5>
+            <center>Resultado</center>
+        </h5>
 
         <div id="message" disable> </div>
 
-        
+        <div class="table-wrap">
+            <table id="table_xml" class="table table-hover" style="text-align: center;">
+                <thead class="table table-dark thead-fixed">
+                    <tr>
+                        <th scope="col">Caminho</th>
+                        <th scope="col">Valor</th>
+                    </tr>
+                </thead>
 
-        <table class="table table-hover responsive-table" style="text-align: center;">
-            <thead class="table table-dark">
-                <tr>
-                    <th scope="col">Caminho</th>
-                    <th scope="col">Valor</th>
-                </tr>
-            </thead>
+                <tbody id="tbody_xml">
+                    <tr></tr>
+                </tbody>
 
-            <tbody id="table_xml">
-                <tr></tr>
-            </tbody>
-
-        </table>
+            </table>
+        </div>
 
     </div>
     <script src="assets/js/send_xml.js"></script>
-    
+
 
 </body>
 

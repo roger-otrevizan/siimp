@@ -2,6 +2,12 @@ h5 {
     margin-left: calc(50vw-(h5/2));
 }
 
+td {
+    word-break: break-all !important;
+    max-width: 100px;
+    vertical-align: middle;
+}
+
 .footer {
     background-color: #ECEFF1;
     position: fixed;
@@ -14,11 +20,12 @@ h5 {
     align-items: center;
 }
 
-.btn-primary{ 
+.btn-primary {
     background-color: #76519c !important;
     border-color: #76519c !important;
 }
 
-#span-file {
-    padding-left: 1rem !important;
+.table-wrap {
+    height: 50vh;
+    overflow-y: auto;
 }
