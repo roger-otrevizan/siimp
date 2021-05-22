@@ -69,15 +69,34 @@ function path_xml() {
 
 //$xml = simplexml_load_file($_FILES['fileUpload']['tmp_name']);
 
-
-
 //$path = "assets/fffffcff-ff49-43bd-93c0-5b9e30de2e73.xml";
 
-//$path = "assets/dataset.xml";
+$path =  simplexml_load_file('assets/xml/dataset.xml');
 
-$path = path_xml();
+//$path = path_xml();
 
-print_r($path);
+//print_r($path);
+
+/*
+$dom = new DOMDocument();
+$dom->loadXml("assets/xml/dataset.xml");
+$xpath = new DOMXpath($dom);
+
+$nodes = $xpath->evaluate('//child');
+
+foreach ($nodes as $node) {
+  var_dump($node->getNodePath());
+}
+
+
+$structure = simplexml_load_string($path);
+$elements = $structure->xpath('//child');
+
+foreach ($elements as $element) {
+  $node = dom_import_simplexml($element);
+  var_dump($node->getNodePath());
+}
+
 /*
 $xml = simplexml_load_file($path); //or die("Erro: não foi possível abrir o XML.");
 
