@@ -1,4 +1,0 @@
-<tr>
-                <td><?php echo $node->getNodePath() ?></td>
-                <td><?php echo $element_value ?></td>
-            </tr>

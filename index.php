@@ -1,11 +1,15 @@
 <?php
 
+include_once 'assets/db/conection.php';
+//include_once 'assets/db/create_db.sql';
+
+
 include_once 'header.php';
 
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +19,9 @@ include_once 'header.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/7fa0f12d2b.js"></script>
+
     <link href="assets/css/custom.css" rel="stylesheet">
 
     <title>SIIMP Sistemas</title>
@@ -24,7 +31,7 @@ include_once 'header.php';
 <body>
     <div class="container-fluid">
 
-        <h5 style="margin-top: 20px;">
+        <h5 style="margin-top: -20px;">
             <center>Ler XML</center>
         </h5>
         <hr>
@@ -34,11 +41,11 @@ include_once 'header.php';
             <form id="upload_xml_form" method="POST" enctype="multipart/form-data" action="">
 
                 <div class="row">
-                    <div class="col-md-4" style="text-align-last: end;">
-                        <span id="span-file"><b>Arquivo:</b></span>
+                    <div class="col-md-4 text-end">
+                        <label id="label-file"><b>Arquivo:</b></label>
                     </div>
 
-                    <div id="file" class="col-md-4">
+                    <div id="file" class="col-md-4 text-center">
                         <input type="file" name="file_upload" accept=".xml">
                     </div>
 
@@ -57,6 +64,24 @@ include_once 'header.php';
         <h5>
             <center>Resultado</center>
         </h5>
+        <form method="POST" id="search_form" action="">
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div class="col-md-3 text-end">
+                    <div class="input-group rounded">
+                        <input type="search" name="search" id="search" class="form-control rounded" placeholder="Pesquisar..." aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script src="assets/js/search_table.js"></script>
+
+        <br>
 
         <div id="message" disable> </div>
 
@@ -77,13 +102,12 @@ include_once 'header.php';
         </div>
 
     </div>
+
     <script src="assets/js/send_xml.js"></script>
 
-
+    <?php
+    include_once 'footer.php';
+    ?>
 </body>
-
-<?php
-include_once 'footer.php';
-?>
 
 </html>
