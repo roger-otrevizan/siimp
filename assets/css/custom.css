@@ -11,7 +11,7 @@ td {
 .footer {
     background-color: #ECEFF1;
     position: fixed;
-    top: 91.5vh;
+    top: 93.5vh;
     width: 100%;
 }
 
@@ -26,6 +26,6 @@ td {
 }
 
 .table-wrap {
-    height: 50vh;
+    height: 45vh;
     overflow-y: auto;
 }
