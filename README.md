@@ -24,5 +24,5 @@
  - .
  
  ### Agradecimentos:
- - SIIM SISTEMAS
- - Gustavo
+ - SIIMP Sistemas
+ - Gustavo Fernandes
