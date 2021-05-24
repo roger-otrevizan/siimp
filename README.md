@@ -46,11 +46,7 @@
  -  https://stackoverflow.com/questions/3615362/which-php-dom-object-has-the-getnodepath-method/3615385#3615385;
  -  https://www.php.net/manual/en/book.dom.php#87471;
  -  
- -  
- -  
- -  
- -  
-  
+ 
  ### Agradecimentos:
  - SIIMP Sistemas
  - Gustavo Fernandes
