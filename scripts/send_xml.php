@@ -6,7 +6,7 @@ include_once '../assets/db/connection.php';
 include_once 'get_node_xpath.php';
 
 //Limpa o banco para envio de novo XML
-$clear = mysqli_query($con, "TRUNCATE TABLE xml");
+$clear = mysqli_query($conn, "TRUNCATE TABLE db_siimp.xml");
 
 function path_xml()
 {
@@ -68,7 +68,7 @@ if (!is_null($elements_value)) {
                 <td><?php echo $element_value ?></td>
             </tr>
 <?php
-            $conn = mysqli_query($con, "INSERT INTO xml (path_xml, value_xml) VALUES ('$xml_path_value','$element_value')");
+            $sql = mysqli_query($conn, "INSERT INTO db_siimp.xml (path_xml, value_xml) VALUES ('$xml_path_value','$element_value')");
         } else {
             echo null;
         }

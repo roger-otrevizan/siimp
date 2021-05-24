@@ -1,10 +1,9 @@
 <?php
 
 include_once 'assets/db/connection.php';
-include_once 'assets/db/create_db.php';
 
 //Limpa o banco para envio de novo XML
-$clear = mysqli_query($con, "TRUNCATE TABLE xml");
+$clear = mysqli_query($conn, "TRUNCATE TABLE db_siimp.xml");
 
 
 include_once 'header.php';
