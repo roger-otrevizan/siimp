@@ -22,7 +22,7 @@
  ## Fontes:
  -  O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificados quando necessário;
 
- -  As cores foram utilzada conforme a paleta gerada com o logo no site: https://imagecolorpicker.com/
+ -  As cores foram utilizadas conforme a paleta gerada com o logo no site: https://imagecolorpicker.com/
     
  
  -  https://getbootstrap.com/docs/5.0/layout/grid/#example
