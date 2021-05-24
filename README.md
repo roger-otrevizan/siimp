@@ -13,15 +13,16 @@
  * JQuery 3.6.0 (importado no index.php);
  * FontAwesome 4 para o ícone pesquisar (importado no index.php);
 
- * O banco **db_siimp** DEVE estar previamente criado;
-
  * IDE de sua preferência.
 
  ## Fontes:
+ - O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificando quando necessário;
+ 
 
- - ;
- - ;
- - .
+ -  https://pt.stackoverflow.com/a/397949;
+ -  https://www.codeply.com/go/OAEz9LcQ0T/bootstrap-fixed-table-header;
+ -  ;
+ -  .
  
  ### Agradecimentos:
  - SIIMP Sistemas
