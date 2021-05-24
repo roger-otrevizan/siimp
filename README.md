@@ -20,7 +20,10 @@
  * IDE de sua preferência.
 
  ## Fontes:
- - O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificados quando necessário;
+ -  O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificados quando necessário;
+
+ -  As cores foram utilzada conforme a paleta gerada com o logo no site: https://imagecolorpicker.com/
+    
  
  -  https://getbootstrap.com/docs/5.0/layout/grid/#example
  -  https://getbootstrap.com/docs/5.0/content/tables/
@@ -45,7 +48,6 @@
  -  https://stackoverflow.com/questions/15223224/how-to-remove-all-namespaces-from-xml-in-php-tags-and-attributes/18994815#18994815;
  -  https://stackoverflow.com/questions/3615362/which-php-dom-object-has-the-getnodepath-method/3615385#3615385;
  -  https://www.php.net/manual/en/book.dom.php#87471;
- -  
  
  ### Agradecimentos:
  - SIIMP Sistemas
