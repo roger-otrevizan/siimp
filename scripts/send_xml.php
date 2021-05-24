@@ -66,12 +66,9 @@ function path_xml()
 
 /*  Esse trecho envia o caminho e valor para a table, além de salvar no banco para futura pesquisa
     Modificado de:
- 
 *   https://stackoverflow.com/questions/20928367/php-xml-find-out-the-path-to-a-known-value/20934722#20934722
 *   https://www.w3schools.com/xml/xpath_syntax.asp
 *   https://www.php.net/manual/pt_BR/domnode.getnodepath.php
-*   
-*  
 
 */
 $path = path_xml();
