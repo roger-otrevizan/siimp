@@ -81,9 +81,9 @@ if (!is_null($elements_value)) {
     foreach ($elements_value as $element_value) {
         $node = dom_import_simplexml($element_value);
 
-        // Verifica se o elemento têm valor e o valor é difente de PHP_EOL (↵), 
+        // Verifica se o elemento têm valor e o valor é difente de \n ENTER (↵), 
         //  para trazer somente o último caminho
-        if ( ($element_value != '') && ($element_value != PHP_EOL) ) {
+        if ( ($element_value != '') && trim($element_value) ) {
 
             $xml_path_value = getNodeXPath($node);
 ?>
