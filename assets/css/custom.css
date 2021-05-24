@@ -1,27 +1,35 @@
 thead {
     height: 40px;
-    line-height: 20px ;
+    line-height: 20px;
 }
+
+/*  Fixar a <thead> da tabela:
+*   https://www.codeply.com/go/OAEz9LcQ0T/bootstrap-fixed-table-header
+*/
 
 tbody {
-    display:block;
+    display: block;
     height: 39vh;
-    overflow:auto;
-}
-thead, tbody tr {
-    display:table;
-    width:100%;
-    table-layout:fixed;
+    overflow: auto;
 }
 
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/*  Resolver o problema de textos grandes estourando a <td>:
+*   https://pt.stackoverflow.com/a/397949
+*/
 td {
     word-break: break-all !important;
     max-width: 100px;
     vertical-align: middle;
 }
 
-.navbar
-.navbar-brand {
+.navbar .navbar-brand {
     height: 50px;
 }
 
