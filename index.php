@@ -1,7 +1,10 @@
 <?php
 
-include_once 'assets/db/conection.php';
-//include_once 'assets/db/create_db.sql';
+include_once 'assets/db/connection.php';
+include_once 'assets/db/create_db.php';
+
+//Limpa o banco para envio de novo XML
+$clear = mysqli_query($con, "TRUNCATE TABLE xml");
 
 
 include_once 'header.php';
@@ -31,7 +34,7 @@ include_once 'header.php';
 <body>
     <div class="container-fluid">
 
-        <h5 style="margin-top: -20px;">
+        <h5 style="margin-top: -30px;">
             <center>Ler XML</center>
         </h5>
         <hr>
@@ -55,10 +58,7 @@ include_once 'header.php';
                 </div>
 
             </form>
-
-
         </div>
-
 
         <hr>
         <h5>
@@ -81,13 +81,9 @@ include_once 'header.php';
 
         <script src="assets/js/search_table.js"></script>
 
-        <br>
-
-        <div id="message" disable> </div>
-
-        <div class="table-wrap">
+        <div class="shadow p-2 mb-3 bg-body rounded">
             <table id="table_xml" class="table table-hover" style="text-align: center;">
-                <thead class="table table-dark thead-fixed">
+                <thead class="table table-dark">
                     <tr>
                         <th scope="col">Caminho</th>
                         <th scope="col">Valor</th>
