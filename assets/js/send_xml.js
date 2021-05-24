@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $('#upload_xml_form').on('submit', function (event) {
+        /*  Impede o comportamento padrão do form ao clicar no botão enviar,
+         *  Pois é enviado via AJAX abaixo
+         */
         event.preventDefault();
 
         $.ajax({
@@ -9,30 +12,15 @@ $(document).ready(function () {
             contentType: false,
             cache: false,
             processData: false,
-            /*
-            beforeSend: function () {
-               
-            },
-            */
-            success: function (data) {
-                //$('#upload_xml_btn').attr('disabled', 'disabled');
-                //$('#upload_xml_btn').text('Enviando...');
-                $('#tbody_xml').html(data);
-                
-                $('#upload_xml_form')[0].reset();
 
+            success: function (data) {
+                $('#tbody_xml').html(data);
+
+                $('#upload_xml_form')[0].reset();
 
                 console.log("Enviado com sucesso...")
             }
         })
-
-        /*
-        setInterval(function () {
-            $('#upload_xml_form')[0].reset();
-            $('#upload_xml_btn').attr('disabled', false);
-            $('#upload_xml_btn').text('Enviar');
-        }, 1500);
-        */
 
     });
 });
