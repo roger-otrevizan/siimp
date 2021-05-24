@@ -53,3 +53,4 @@
  - SIIMP Sistemas
  - Gustavo Fernandes
  - Equipe de TI
+ - Clizan W. e Wanderley F.
