@@ -3,7 +3,7 @@
  
  Projeto para leitura e pesquisa em um arquivo XML.
  
- ![Leitor XML](https://github.com/roger-otrevizan/siimp/assets/img/siimp.gif)
+ ![Leitor XML](https://github.com/roger-otrevizan/siimp/blob/main/assets/img/siimp.gif)
 
  Esse sistema recebe um arquivo do tipo XML, o lê, salva o **caminho** e **valor** no banco de dados e realiza a consulta da palavra digitada pelo usuário.
 
