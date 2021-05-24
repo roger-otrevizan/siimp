@@ -16,7 +16,7 @@
  * IDE de sua preferência.
 
  ## Fontes:
- - O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificando quando necessário;
+ - O Menu, Formulário de envio do XML, Formulário de pesquisa da tabela, Tabela e Rodapé foram criados com componentes do Bootstrap e modificados quando necessário;
  
 
  -  https://pt.stackoverflow.com/a/397949;
