@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost"; /*Host na qual o banco de dados está configurado*/
-	$username = "roger"; /*Usuário do banco de dados MySQL*/
-	$password = "Rogelol2!"; /*Senha do banco de dados MySQL*/
+	$username = "root"; /*Usuário do banco de dados MySQL*/
+	$password = ""; /*Senha do banco de dados MySQL*/
 
 /**  Cria a conexão: https://www.w3schools.com/php/php_mysql_create.asp */
 $conn = new mysqli($servername, $username, $password);
