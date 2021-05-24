@@ -3,7 +3,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         $.ajax({
-            url: "send_xml.php",
+            url: "scripts/send_xml.php",
             method: "POST",
             data: new FormData(this),
             contentType: false,

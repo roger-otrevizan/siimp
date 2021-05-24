@@ -1,6 +1,0 @@
-CREATE TABLE IF NOT EXISTS xml (
-  id_xml INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  path_xml VARCHAR(255),
-  value_xml LONGTEXT
-);
-  

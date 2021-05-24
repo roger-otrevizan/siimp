@@ -1,13 +1,11 @@
-/*
-$(document).ready(function () {
-    $('#search_form').on('submit', function (event) {
-        if ((e.keyCode === 10) || (e.keyCode === 13)) {
-            event.preventDefault();
-            //return false;
-        }
-    });
+//Impedir envio ao pressionar ENTER
+$('#search').keypress(function (e) {
+    if (e.which == 13) {
+        e.preventDefault();
+        console.log('Não vou enviar');
+    }
 });
-*/
+
 
 $(function () {
     $("#search").keyup(function () {
@@ -18,10 +16,12 @@ $(function () {
             var data = {
                 word: search
             }
-            $.post('user_search.php', data, function (retorno) {
+            $.post('scripts/user_search.php', data, function (retorno) {
                 $('#tbody_xml').html(retorno);
             });
 
         }
+
+
     });
 });
