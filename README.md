@@ -6,6 +6,7 @@
  ![Leitor XML]()
 
   ## Requisitos para funcionar:
+ * Algum webserver - LAMP/WAMP/Laragon/NGINX;
  * PHP 8.0.5 (foi desenvolvido nessa versão, mas deve funcionar com versões anteriores);
  * MYSQL 8.0.25 (foi desenvolvido nessa versão, mas deve funcionar com versões anteriores);
  * Bootstrap 5.0.1 (importado no index.php);
