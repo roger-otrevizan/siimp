@@ -9,7 +9,7 @@ $('#search').keypress(function (e) {
 });
 
 /* Enviar pesquisa para scripts/table_search.php:
-*  CELKE https://www.youtube.com/watch?v=lM42ZP3Ze-M
+*  CELKE modificado https://www.youtube.com/watch?v=lM42ZP3Ze-M
 */
 $(function () {
     $("#search").keyup(function () {
