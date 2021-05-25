@@ -30,8 +30,8 @@ include_once '../assets/db/connection.php';
         Contudo, por razões de integridade foi optado a usar a função criada por Sina.Salek.ws
         que está descrita no arquivo: scripts/get_node_xpath.
 
-        Desse modo, com a função getNodeXPath($node), obtém-se o caminho e 
-        com o retorno do XPath, o valor do elemento.
+        Desse modo, com a função getNodeXPath($node), obtém-se o caminho 
+        e com o retorno do XPath, o valor do elemento.
 
 ---------------------------------------------------------------------------------- */
 
@@ -42,7 +42,7 @@ include_once 'get_node_xpath.php';
 $clear = mysqli_query($conn, "TRUNCATE TABLE db_siimp.xml");
 
 
-/* Funcção que retorna o XML, após ser enviado pelo user, modificado de:
+/* Função que retorna o XML, após ser enviado pelo user, modificado de:
 
 *   https://www.youtube.com/watch?v=nZo5gPTOWnw
 *   https://www.youtube.com/watch?v=qSnQ9Sx4ZJ8
@@ -81,7 +81,7 @@ if (!is_null($elements_value)) {
     foreach ($elements_value as $element_value) {
         $node = dom_import_simplexml($element_value);
 
-        // Verifica se o elemento têm valor e o valor é difente de \n ENTER (↵), 
+        // Verifica se o elemento têm valor e o valor é diferente de \n ENTER (↵), 
         //  para trazer somente o último caminho
         if ( ($element_value != '') && trim($element_value) ) {
 
@@ -101,7 +101,7 @@ if (!is_null($elements_value)) {
     }
 }
 
-//  Nessa parte tentei pegar os atributos de XML que tenham tag com autofechamento
+//  Nessa parte tentei pegar os atributos de XML que continham tag com autofechamento
 //$elements_attr = $structure->xpath('//@*');
 /*
 if (!is_null($elements_attr)) {
